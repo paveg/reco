@@ -1,13 +1,11 @@
 extern crate scopeguard;
 
+mod reco;
+
 use {
     scopeguard::guard,
     std::process,
 };
-
-fn reco() {
-    // TODO: Implement this.
-}
 
 fn _main() -> i32 {
     let result = 0;
@@ -23,7 +21,7 @@ fn main() {
     });
 
     // actual execution
-    reco();
+    println!("{:#?}", reco::Reco {});
 
     process::exit(_main());
 }
