@@ -16,10 +16,14 @@ fn _main() -> i32 {
 }
 
 fn main() {
+    // Go-like defer
     let _g = guard((), |_| {
         eprintln!("Error: {}", "error information.");
         process::exit(1);
     });
+
+    // actual execution
     reco();
+
     process::exit(_main());
 }
